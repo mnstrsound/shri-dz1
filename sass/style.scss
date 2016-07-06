@@ -1,5 +1,6 @@
 @import "reset";
 @import "mixins";
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic);
 
 * {
   box-sizing: border-box;
@@ -7,6 +8,20 @@
 
 body {
   font-size: $font-size;
-  font-family: Arial, sans-serif;
+  font-family: 'PT Serif', serif;
   font-weight: normal;
+  line-height: 1.2em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.wrapper {
+  overflow: hidden;
+}
+@media screen and (min-width: $breakpoint-lg) {
+  .container {
+    padding: 0 40px;
+  }
 }

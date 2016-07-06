@@ -1,0 +1,113 @@
+@import "mixins";
+
+.img-block {
+  position: relative;
+  background-size: cover !important;
+  margin-bottom: 8vh;
+  &--first,
+  &--second,
+  &--third,
+  &--fourth,
+  &--fifth,
+  &--ninth,
+  &--tenth {
+    height: 80vh;
+  }
+  &--sizth,
+  &--seventh,
+  &--eighth {
+    height: 100vh;
+  }
+  &--first {
+    background: url('../img/bl1-bg.jpeg') center no-repeat;
+  }
+  &--second {
+    background: url('../img/bl2-bg.jpeg') center no-repeat;
+  }
+  &--third {
+    background: url('../img/bl3-bg.jpeg') center no-repeat;
+  }
+  &--fourth {
+    background: url('../img/bl4-bg.jpeg') center no-repeat;
+  }
+  &--fifth {
+    background: url('../img/bl5-bg.jpeg') center no-repeat;
+  }
+  &--sixth {
+    background: url('../img/bl6-bg.jpeg') center no-repeat;
+  }
+  &--seventh {
+    background: url('../img/bl7-bg.jpeg') center no-repeat;
+  }
+  &--eighth {
+    background: url('../img/bl8-bg.jpeg') center no-repeat;
+  }
+  &--ninth {
+    background: url('../img/bl9-bg.jpeg') center no-repeat;
+  }
+  &--tenth {
+    background: url('../img/bl10-bg.jpeg') center no-repeat;
+    margin-bottom: 0;
+  }
+  &__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    b {
+      display: block;
+      line-height: 1.2em;
+      font-size: 27px;
+    }
+    small {
+      display: block;
+      font-size: 18px;
+    }
+  }
+  &__footer {
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 13px;
+    margin: 0 3%;
+    a {
+      color: #fff;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-sm) {
+  .img-block {
+    &__title {
+      b {
+        font-size: 60px;
+
+      }
+      small {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+  .img-block {
+    &__title {
+      b {
+
+      }
+      small {
+
+      }
+    }
+    &__footer {
+      font-size: 16px;
+    }
+  }
+}

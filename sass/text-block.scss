@@ -1,0 +1,104 @@
+@import "mixins";
+
+.text-block {
+  margin-bottom: 10vh;
+  &__row {
+    position: relative;
+  }
+  &__column {
+    max-width: 600px;
+    > p {
+      margin: 0 5% 5vh 5%;
+      text-align: justify;
+      &:nth-of-type(1) {
+        margin-top: 0;
+       &:first-letter {
+         font-size: 20px;
+         font-weight: bold;
+       }
+      }
+    }
+    > h3 {
+      margin:0 5% 5vh 5%;
+      font-weight: 600;
+    }
+  }
+  &__additional {
+    max-width: 400px;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0 10%;
+    &:not(:last-child) {
+      margin-bottom: 5vh;
+    }
+    &:last-child {
+      margin-top: 5vh;
+    }
+    &--image {
+      margin: 0;
+      img {
+        display: block;
+        margin: 0 0 5vh 0;
+      }
+      p {
+        margin: 0 10%;
+      }
+    }
+    &--text {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ccc;
+        left: -15px;
+      }
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-sm) {
+  .text-block {
+    &__column {
+      margin: 0 auto 5vh auto;
+    }
+    &__additional {
+      margin: 0 auto;
+      &--image {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+  .text-block {
+    width: 55%;
+    &__column {
+      margin: 0;
+      h3 {
+        text-transform: uppercase;
+      }
+    }
+    &__additional {
+      width: 35%;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      &--top {
+        top: 0;
+      }
+      &--bottom {
+        bottom: 0;
+      }
+    }
+  }
+}
