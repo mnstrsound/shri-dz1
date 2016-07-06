@@ -2,8 +2,19 @@
 
 .img-block {
   position: relative;
-  background-size: cover !important;
-  margin-bottom: 8vh;
+  &__image {
+    background-size: cover !important;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: rgba(0,0,0,.2);
+    }
+  }
   &--first,
   &--second,
   &--third,
@@ -12,42 +23,76 @@
   &--ninth,
   &--tenth {
     height: 80vh;
+    .img-block__image {
+      height: 80vh;
+    }
   }
-  &--sizth,
+  &--sixth,
   &--seventh,
   &--eighth {
     height: 100vh;
+    .img-block__image {
+      height: 100vh;
+    }
   }
   &--first {
-    background: url('../img/bl1-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl1-bg.jpeg') center no-repeat;
+    }
   }
   &--second {
-    background: url('../img/bl2-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl2-bg.jpeg') center no-repeat;
+    }
   }
   &--third {
-    background: url('../img/bl3-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl3-bg.jpeg') center no-repeat;
+    }
   }
   &--fourth {
-    background: url('../img/bl4-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl4-bg.jpeg') center no-repeat;
+    }
   }
   &--fifth {
-    background: url('../img/bl5-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl5-bg.jpeg') center no-repeat;
+    }
   }
   &--sixth {
-    background: url('../img/bl6-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl6-bg.jpeg') center no-repeat;
+    }
   }
   &--seventh {
-    background: url('../img/bl7-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl7-bg.jpeg') center no-repeat;
+    }
   }
   &--eighth {
-    background: url('../img/bl8-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl8-bg.jpeg') center no-repeat;
+    }
   }
   &--ninth {
-    background: url('../img/bl9-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl9-bg.jpeg') center no-repeat;
+    }
   }
   &--tenth {
-    background: url('../img/bl10-bg.jpeg') center no-repeat;
+    .img-block__image {
+      background: url('../img/bl10-bg.jpeg') center no-repeat;
+    }
     margin-bottom: 0;
+  }
+  &__image{
+    &--fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
   }
   &__title {
     position: absolute;

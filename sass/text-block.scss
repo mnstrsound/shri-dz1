@@ -1,7 +1,11 @@
 @import "mixins";
 
 .text-block {
-  margin-bottom: 10vh;
+  padding-top: 8vh;
+  padding-bottom: 5vh;
+  background: #fff;
+  position: relative;
+  z-index: 2;
   &__row {
     position: relative;
   }
@@ -29,15 +33,13 @@
     font-size: 14px;
     font-weight: bold;
     text-align: justify;
-    margin: 0 10%;
-    &:not(:last-child) {
-      margin-bottom: 5vh;
-    }
+    margin: 0 10% 5vh 10%;
     &:last-child {
       margin-top: 5vh;
     }
     &--image {
-      margin: 0;
+      margin-left: 0;
+      margin-right: 0;
       img {
         display: block;
         margin: 0 0 5vh 0;
@@ -69,7 +71,7 @@
       margin: 0 auto 5vh auto;
     }
     &__additional {
-      margin: 0 auto;
+      margin: 0 auto 5vh auto;
       &--image {
         p {
           margin: 0;

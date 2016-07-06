@@ -20,6 +20,12 @@ body {
 .wrapper {
   overflow: hidden;
 }
+.section {
+  //margin-bottom: 10vh;
+  &:last-child {
+    //margin-bottom: 0;
+  }
+}
 @media screen and (min-width: $breakpoint-lg) {
   .container {
     padding: 0 40px;
