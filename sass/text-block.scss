@@ -81,8 +81,8 @@
 
 @media screen and (min-width: $breakpoint-lg){
   .text-block {
-    width: 55%;
     &__column {
+      width: 55%;
       margin: 0;
       h3 {
         text-transform: uppercase;
